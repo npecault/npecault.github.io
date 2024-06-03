@@ -4,7 +4,7 @@ export interface HighlightedProps {
 }
 const Highlighted = ({highlight, text}: HighlightedProps) => {
     const parts = highlight.length > 0 ?
-        [...text.matchAll(new RegExp(`(${highlight})?(.*)?(${highlight})(.*)?`, 'gi'))][0].slice(1) :
+        text.split(new RegExp(`(${highlight})`, 'gi')) :
         [text];
 
     const nodes = parts
