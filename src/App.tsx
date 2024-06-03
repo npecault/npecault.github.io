@@ -1,26 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import StorageGraph from "./exercise-one/StorageGraph";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="flex flex-col h-full">
+            <h2>Exercise 1</h2>
+            <StorageGraph/>
+        </div>
+    );
 }
 
 export default App;
