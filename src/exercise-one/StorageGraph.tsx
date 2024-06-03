@@ -1,4 +1,5 @@
 import useStorageServiceValue from "../storage-service/useStorageServiceValue";
+import React from "react";
 
 const StorageGraph = () => {
     const [values, setValues] = useStorageServiceValue<number[]>(
@@ -8,13 +9,14 @@ const StorageGraph = () => {
 
     return (
         <div className="flex flex-col gap-4 min-h-fit w-fit">
+            <h2>Exercise 1</h2>
             <div className="flex gap-4">
                 <div className="flex flex-col justify-between">
-                    {values.map((value, index) => (
-                            <div className="flex gap-3 justify-between items-center">
-                                {`Value ${index}`}
+                    {values.map((value, index) =>
+                        (
+                            <div key={index} className="flex gap-3 justify-between items-center">
+                                <label>{`Value ${index}`}</label>
                                 <input
-                                    key={index}
                                     type="range"
                                     min="0"
                                     max="1"
@@ -31,11 +33,14 @@ const StorageGraph = () => {
                 </div>
                 <div className="flex gap-2 items-end">
                     {values.map((value, index) => (
-                        <div key={index} className={`bg-blue-500 rounded-full w-2`} style={{height: `${value * 100}%`}}/>
+                        <div key={index} className={`bg-blue-500 rounded-full w-2`}
+                             style={{height: `${value * 100}%`}}/>
                     ))}
                 </div>
             </div>
-            <button className='border-2 rounded-full' onClick={() => setValues([...values, Math.random()])}>Add a value</button>
+            <button className='border-2 rounded-full' onClick={() => setValues([...values, Math.random()])}>Add a
+                value
+            </button>
         </div>
 
     );
