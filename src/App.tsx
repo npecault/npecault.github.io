@@ -5,6 +5,7 @@ import Dialog from "./dialog/Dialog";
 import SpawnModal from "./exercise-two/SpawnModal";
 import useDialogContext from "./dialog/useDialogContext";
 import {DialogType} from "./dialog/DialogType";
+import UserSelection from "./exercise-three/UserSelection";
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
                 <StorageGraph/>
                 <hr/>
                 <SpawnModal/>
+                <hr/>
+                <UserSelection/>
             </div>
         </DialogContext.Provider>
     );
