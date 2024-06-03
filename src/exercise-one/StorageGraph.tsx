@@ -38,7 +38,7 @@ const StorageGraph = () => {
                     ))}
                 </div>
             </div>
-            <button className='border-2 rounded-full' onClick={() => setValues([...values, Math.random()])}>Add a
+            <button className='border-2 rounded-full p-4' onClick={() => setValues([...values, Math.random()])}>Add a
                 value
             </button>
         </div>

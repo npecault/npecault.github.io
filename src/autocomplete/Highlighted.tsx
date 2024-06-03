@@ -11,7 +11,7 @@ const Highlighted = ({highlight, text}: HighlightedProps) => {
         .filter(x => x !== undefined)
         .map(x => x.toLowerCase() === highlight.toLowerCase() ? <b>{x}</b> : <>{x}</>);
 
-    return <span>{nodes.map((x, index) => <span key={index}>{x}</span>)}</span>
+    return <span>{nodes.map((x, index) => <span key={index}>{x}</span>)}</span>;
 };
 
 export default Highlighted;
