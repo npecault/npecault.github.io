@@ -20,7 +20,7 @@ export default class LocalStorageService implements StorageService {
         let lastValues = {...localStorage};
         return setInterval(() => {
             const newValues = {...localStorage};
-            Object.keys(newValues).forEach(key => {
+            new Set([...Object.keys(lastValues), ...Object.keys(newValues)]).forEach(key => {
                 const newValue = newValues[key];
                 if (newValue !== lastValues[key]) this.notify(key, newValue);
             });
