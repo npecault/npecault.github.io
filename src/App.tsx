@@ -22,11 +22,12 @@ function App() {
                 {dialogContext.config.body}
             </Dialog>
 
-            <div className="flex flex-col h-full gap-3">
-                <StorageGraph/>
-                <hr/>
-                <SpawnModal/>
-                <hr/>
+            <div className='w-full flex p-16'>
+                <div className="flex flex-col h-full w-full gap-3">
+                    <StorageGraph/>
+                    <hr/>
+                    <SpawnModal/>
+                </div>
                 <UserSelection/>
             </div>
         </DialogContext.Provider>

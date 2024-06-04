@@ -9,7 +9,7 @@ const StorageGraph = () => {
 
     return (
         <div className="flex flex-col gap-4 min-h-fit w-fit">
-            <h2>Exercise 1</h2>
+            <h1>Exercise 1</h1>
             <div className="flex gap-4">
                 <div className="flex flex-col justify-between">
                     {values.map((value, index) =>

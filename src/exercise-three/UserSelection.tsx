@@ -6,7 +6,7 @@ const UserSelection = () => {
     const [selectedUser, setSelectedUser] = useState<{ name: string } | null>(null);
     const [selectedAlbum, setSelectedAlbum] = useState<{ title: string } | null>(null);
 
-    return <div className='flex flex-col gap-4 min-h-fit w-fit'>
+    return <div className='flex flex-col gap-4 min-h-fit w-full'>
         <h1>Exercise 3</h1>
         {selectedUser ? <span><b>Selected:</b> {selectedUser.name}</span> :
             <b>No user selected, start typing in the search input to see options</b>}
